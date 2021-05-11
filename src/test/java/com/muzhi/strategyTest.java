@@ -1,7 +1,10 @@
 package com.muzhi;
 
+import com.muzhi.strategy.Duck;
 import com.muzhi.strategy.MallardDuck;
-import com.muzhi.strategy.RedheadDuck;
+import com.muzhi.strategy.MiniDuckSimulator;
+import com.muzhi.strategy.behavior.fly.FlyWithWings;
+
 
 /**
  * <h3>DesignPatterns</h3>
@@ -12,10 +15,21 @@ import com.muzhi.strategy.RedheadDuck;
  **/
 public class strategyTest {
     public static void main(String[] args) {
-        MallardDuck mallardDuck = new MallardDuck();
+        Duck mallardDuck = new MallardDuck();
         mallardDuck.display();
+        mallardDuck.performQuack();
+        mallardDuck.performFly();
 
-        RedheadDuck redheadDuck = new RedheadDuck();
-        redheadDuck.display();
+
+        System.out.println("-----------------");
+
+        Duck miniDuckSimulator = new MiniDuckSimulator();
+        miniDuckSimulator.display();
+        miniDuckSimulator.performQuack();
+        miniDuckSimulator.performFly();
+
+        System.out.println("----模型鸭变身-----");
+        miniDuckSimulator.setFlyBehavior(new FlyWithWings());
+        miniDuckSimulator.performFly();
     }
 }

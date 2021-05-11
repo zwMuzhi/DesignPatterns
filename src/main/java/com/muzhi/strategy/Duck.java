@@ -1,5 +1,9 @@
 package com.muzhi.strategy;
 
+import com.muzhi.strategy.behavior.fly.FlyBehavior;
+import com.muzhi.strategy.behavior.quack.QuackBehavior;
+
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -10,26 +14,45 @@ import java.util.List;
  * @date : 2021-04-20 22:04
  **/
 public class Duck {
+
+    FlyBehavior flyBehavior;
+    QuackBehavior quackBehavior;
+
+
     /**
-     * 呱呱叫
+     * 叫
      */
-    public void quack(){
-        System.out.println("呱呱叫");
-    };
+    public void performQuack() {
+        quackBehavior.qucak();
+    }
+
+    /**
+     * 飞行
+     */
+    public void performFly() {
+        flyBehavior.fly();
+    }
 
     /**
      * 游泳
      */
-    public  void swin(){
+    public void swin() {
         System.out.println("游泳");
-    };
+    }
 
     /**
      * 外观
      */
-    public void display(){
+    public void display() {
         System.out.println("外观");
-    };
+    }
 
 
+    public void setFlyBehavior(FlyBehavior flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    public void setQuackBehavior(QuackBehavior quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
 }
