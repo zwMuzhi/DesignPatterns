@@ -1,9 +1,9 @@
 package com.muzhi;
 
 import com.muzhi.observer.CurrentConditionsDisplay;
-import com.muzhi.observer.CurrentConditionsDisplayByApi;
+import com.muzhi.observer.apiImpl.CurrentConditionsDisplayByApi;
 import com.muzhi.observer.WeatherData;
-import com.muzhi.observer.WeatherDataByApi;
+import com.muzhi.observer.apiImpl.WeatherDataByApi;
 
 import java.util.concurrent.TimeUnit;
 

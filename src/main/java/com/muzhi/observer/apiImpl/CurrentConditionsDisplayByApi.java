@@ -1,4 +1,6 @@
-package com.muzhi.observer;
+package com.muzhi.observer.apiImpl;
+
+import com.muzhi.observer.DisplayElement;
 
 import java.util.Observable;
 import java.util.Observer;

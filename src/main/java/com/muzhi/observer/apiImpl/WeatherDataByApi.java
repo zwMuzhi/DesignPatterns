@@ -1,7 +1,5 @@
-package com.muzhi.observer;
+package com.muzhi.observer.apiImpl;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Observable;
 
 /**
